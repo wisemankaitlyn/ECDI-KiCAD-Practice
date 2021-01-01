@@ -1,0 +1,357 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "8.2 - Uninterruptible +5V Supply"
+Date "2020-12-30"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:GND #PWR03
+U 1 1 5FECFE24
+P 5150 4650
+F 0 "#PWR03" H 5150 4400 50  0001 C CNN
+F 1 "GND" H 5155 4477 50  0000 C CNN
+F 2 "" H 5150 4650 50  0001 C CNN
+F 3 "" H 5150 4650 50  0001 C CNN
+	1    5150 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5FED3C4E
+P 5550 4250
+F 0 "C1" H 5665 4296 50  0000 L CNN
+F 1 "47pF" H 5665 4205 50  0000 L CNN
+F 2 "Capacitor_THT:C_Axial_L5.1mm_D3.1mm_P7.50mm_Horizontal" H 5588 4100 50  0001 C CNN
+F 3 "~" H 5550 4250 50  0001 C CNN
+	1    5550 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 4000 5150 4450
+Wire Wire Line
+	5550 4000 5550 4100
+Wire Wire Line
+	5550 4400 5550 4450
+Wire Wire Line
+	5550 4450 5150 4450
+Connection ~ 5150 4450
+Wire Wire Line
+	5150 4450 5150 4650
+$Comp
+L Device:R R2
+U 1 1 5FEDA40E
+P 4200 3150
+F 0 "R2" H 4270 3196 50  0000 L CNN
+F 1 "200k" H 4270 3105 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4130 3150 50  0001 C CNN
+F 3 "~" H 4200 3150 50  0001 C CNN
+	1    4200 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5FEDA7B6
+P 4200 3700
+F 0 "R3" H 4270 3746 50  0000 L CNN
+F 1 "100k" H 4270 3655 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4130 3700 50  0001 C CNN
+F 3 "~" H 4200 3700 50  0001 C CNN
+	1    4200 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5FED593F
+P 3000 3600
+F 0 "#PWR01" H 3000 3350 50  0001 C CNN
+F 1 "GND" H 3005 3427 50  0000 C CNN
+F 2 "" H 3000 3600 50  0001 C CNN
+F 3 "" H 3000 3600 50  0001 C CNN
+	1    3000 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 2600 3000 2500
+Wire Wire Line
+	3500 2500 3000 2500
+Wire Wire Line
+	3500 2600 3500 2500
+Wire Wire Line
+	3500 3000 3000 3000
+$Comp
+L Device:R R1
+U 1 1 5FED65B8
+P 3500 2750
+F 0 "R1" H 3570 2796 50  0000 L CNN
+F 1 "680" H 3570 2705 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3430 2750 50  0001 C CNN
+F 3 "~" H 3500 2750 50  0001 C CNN
+	1    3500 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N5817 D1
+U 1 1 5FED5F27
+P 3000 2750
+F 0 "D1" V 2950 2810 50  0000 L CNN
+F 1 "1N5817" V 3030 2810 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 3000 2575 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88525/1n5817.pdf" H 3000 2750 50  0001 C CNN
+	1    3000 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Battery BT1
+U 1 1 5FED04C0
+P 3000 3300
+F 0 "BT1" H 3108 3346 50  0000 L CNN
+F 1 "3.6V" H 3108 3255 50  0000 L CNN
+F 2 "Battery:BatteryHolder_Keystone_1042_1x18650" V 3000 3360 50  0001 C CNN
+F 3 "~" V 3000 3360 50  0001 C CNN
+	1    3000 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5FEDED61
+P 4200 4000
+F 0 "#PWR02" H 4200 3750 50  0001 C CNN
+F 1 "GND" H 4205 3827 50  0000 C CNN
+F 2 "" H 4200 4000 50  0001 C CNN
+F 3 "" H 4200 4000 50  0001 C CNN
+	1    4200 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 3850 4200 4000
+$Comp
+L Diode:1N4001 D2
+U 1 1 5FEDF30D
+P 4800 2200
+F 0 "D2" V 4830 2140 50  0000 R CNN
+F 1 "1N4001" V 4760 2140 50  0000 R CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 4800 2025 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 4800 2200 50  0001 C CNN
+	1    4800 2200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:L L1
+U 1 1 5FEE03EC
+P 5150 2500
+F 0 "L1" V 5250 2500 50  0000 C CNN
+F 1 "470uH" V 5100 2500 50  0000 C CNN
+F 2 "Inductor_THT:L_Axial_L5.3mm_D2.2mm_P7.62mm_Horizontal_Vishay_IM-1" H 5150 2500 50  0001 C CNN
+F 3 "~" H 5150 2500 50  0001 C CNN
+	1    5150 2500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4200 3300 4200 3400
+Wire Wire Line
+	4800 2350 4800 2500
+Wire Wire Line
+	4800 2050 4800 2000
+Wire Wire Line
+	4800 2000 4200 2000
+Connection ~ 3000 3000
+Wire Wire Line
+	3000 2900 3000 3000
+Wire Wire Line
+	3500 2900 3500 3000
+Wire Wire Line
+	3000 3500 3000 3600
+Wire Wire Line
+	3000 3000 3000 3100
+Wire Wire Line
+	4200 3000 4200 2000
+Wire Wire Line
+	4900 3400 4200 3400
+Connection ~ 4200 3400
+Wire Wire Line
+	4200 3400 4200 3550
+Wire Wire Line
+	4800 2500 5000 2500
+$Comp
+L Diode:1N5817 D3
+U 1 1 5FEF26C1
+P 6000 2500
+F 0 "D3" H 5950 2410 50  0000 L CNN
+F 1 "1N5817" H 5840 2600 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 6000 2325 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88525/1n5817.pdf" H 6000 2500 50  0001 C CNN
+	1    6000 2500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5300 2500 5450 2500
+Wire Wire Line
+	5450 3050 5450 2500
+Connection ~ 5450 2500
+Wire Wire Line
+	5450 2500 5850 2500
+$Comp
+L power:GND #PWR04
+U 1 1 5FEF4156
+P 6500 4650
+F 0 "#PWR04" H 6500 4400 50  0001 C CNN
+F 1 "GND" H 6505 4477 50  0000 C CNN
+F 2 "" H 6500 4650 50  0001 C CNN
+F 3 "" H 6500 4650 50  0001 C CNN
+	1    6500 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5FEF439F
+P 6500 4050
+F 0 "R5" H 6570 4096 50  0000 L CNN
+F 1 "100k" H 6570 4005 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6430 4050 50  0001 C CNN
+F 3 "~" H 6500 4050 50  0001 C CNN
+	1    6500 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5FEF49C2
+P 6500 3500
+F 0 "R4" H 6570 3546 50  0000 L CNN
+F 1 "280k" H 6570 3455 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6430 3500 50  0001 C CNN
+F 3 "~" H 6500 3500 50  0001 C CNN
+	1    6500 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 3300 6000 3300
+Wire Wire Line
+	6500 3300 6500 3350
+Wire Wire Line
+	5800 3450 6000 3450
+Wire Wire Line
+	6000 3450 6000 3300
+Connection ~ 6000 3300
+Wire Wire Line
+	6000 3300 6500 3300
+Wire Wire Line
+	5800 3700 6500 3700
+Wire Wire Line
+	6500 3700 6500 3650
+Wire Wire Line
+	6500 3900 6500 3700
+Connection ~ 6500 3700
+Wire Wire Line
+	6500 4650 6500 4200
+Wire Wire Line
+	6150 2500 6500 2500
+Wire Wire Line
+	6500 2500 6500 3300
+Connection ~ 6500 3300
+Wire Wire Line
+	3500 2500 4800 2500
+Connection ~ 3500 2500
+Connection ~ 4800 2500
+$Comp
+L Device:C C2
+U 1 1 5FEFBEB9
+P 7000 2750
+F 0 "C2" H 7115 2796 50  0000 L CNN
+F 1 "470uF" H 7115 2705 50  0000 L CNN
+F 2 "Capacitor_THT:C_Axial_L5.1mm_D3.1mm_P7.50mm_Horizontal" H 7038 2600 50  0001 C CNN
+F 3 "~" H 7000 2750 50  0001 C CNN
+	1    7000 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5FEFC6CC
+P 7000 3000
+F 0 "#PWR05" H 7000 2750 50  0001 C CNN
+F 1 "GND" H 7005 2827 50  0000 C CNN
+F 2 "" H 7000 3000 50  0001 C CNN
+F 3 "" H 7000 3000 50  0001 C CNN
+	1    7000 3000
+	1    0    0    -1  
+$EndComp
+Text Notes 7450 2400 0    50   ~ 0
+Uninterruptible\n+5V output
+Wire Wire Line
+	6500 2500 7000 2500
+Connection ~ 6500 2500
+Wire Wire Line
+	7000 2900 7000 3000
+$Comp
+L Connector:Screw_Terminal_01x01 J3
+U 1 1 5FF012C7
+P 7700 5000
+F 0 "J3" H 7780 5042 50  0000 L CNN
+F 1 "Screw_Terminal_01x01" H 7780 4951 50  0000 L CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_360271_1x01_Horizontal_ScrewM3.0_Boxed" H 7700 5000 50  0001 C CNN
+F 3 "~" H 7700 5000 50  0001 C CNN
+	1    7700 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x01 J2
+U 1 1 5FF01C83
+P 7700 2500
+F 0 "J2" H 7780 2542 50  0000 L CNN
+F 1 "Screw_Terminal_01x01" H 7780 2451 50  0000 L CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_360271_1x01_Horizontal_ScrewM3.0_Boxed" H 7700 2500 50  0001 C CNN
+F 3 "~" H 7700 2500 50  0001 C CNN
+	1    7700 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 2600 7000 2500
+Wire Wire Line
+	7500 2500 7000 2500
+Connection ~ 7000 2500
+Wire Wire Line
+	4900 3600 4750 3600
+Wire Wire Line
+	4750 3600 4750 5000
+Wire Wire Line
+	4750 5000 7500 5000
+Text Notes 7500 4850 0    50   ~ 0
+~Power Fail
+$Comp
+L Connector:Screw_Terminal_01x01 J1
+U 1 1 5FF04C9A
+P 3000 1750
+F 0 "J1" V 2964 1662 50  0000 R CNN
+F 1 "Screw_Terminal_01x01" V 2873 1662 50  0000 R CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_360271_1x01_Horizontal_ScrewM3.0_Boxed" H 3000 1750 50  0001 C CNN
+F 3 "~" H 3000 1750 50  0001 C CNN
+	1    3000 1750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4200 2000 3000 2000
+Wire Wire Line
+	3000 2000 3000 1950
+Connection ~ 4200 2000
+Text Notes 2350 1800 0    50   ~ 0
+Line powered\n+5V Input
+$Comp
+L MAX:MAX630 U1
+U 1 1 5FF16B23
+P 5350 3500
+F 0 "U1" H 5050 4000 50  0000 C CNN
+F 1 "MAX630" H 5150 3900 50  0000 C CNN
+F 2 "MAX630:MAX630CPA+_8-pin_CDIP" H 5350 3500 50  0001 C CNN
+F 3 "" H 5350 3500 50  0001 C CNN
+	1    5350 3500
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
