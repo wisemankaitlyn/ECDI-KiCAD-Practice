@@ -1,0 +1,199 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "1.1 - Monostable Multivibrator"
+Date "2021-01-04"
+Rev ""
+Comp ""
+Comment1 "Kaitlyn Wiseman"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Timer:NA555D U1
+U 1 1 5FF3459D
+P 5500 4000
+F 0 "U1" H 5200 4350 50  0000 C CNN
+F 1 "NA555D" H 5700 4350 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 6350 3600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" H 6350 3600 50  0001 C CNN
+	1    5500 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5FF35CEC
+P 4500 4250
+F 0 "C1" H 4615 4296 50  0000 L CNN
+F 1 "0.01uF" H 4615 4205 50  0000 L CNN
+F 2 "Capacitor_THT:C_Axial_L5.1mm_D3.1mm_P10.00mm_Horizontal" H 4538 4100 50  0001 C CNN
+F 3 "~" H 4500 4250 50  0001 C CNN
+	1    4500 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x03 J1
+U 1 1 5FF3630B
+P 3300 3800
+F 0 "J1" H 3300 3600 50  0000 C CNN
+F 1 "Screw_Terminal_01x03" H 3300 3350 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-3_P5.08mm" H 3300 3800 50  0001 C CNN
+F 3 "~" H 3300 3800 50  0001 C CNN
+	1    3300 3800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5000 3800 3500 3800
+Wire Wire Line
+	3500 3700 4500 3700
+Wire Wire Line
+	4500 3700 4500 3500
+Wire Wire Line
+	4500 3500 4800 3500
+Wire Wire Line
+	5500 3500 5500 3600
+Wire Wire Line
+	5000 4200 4800 4200
+Wire Wire Line
+	4800 4200 4800 3500
+Connection ~ 4800 3500
+Wire Wire Line
+	4800 3500 5500 3500
+Wire Wire Line
+	5000 4000 4500 4000
+Wire Wire Line
+	4500 4000 4500 4100
+$Comp
+L power:GND #PWR01
+U 1 1 5FF38314
+P 3500 4000
+F 0 "#PWR01" H 3500 3750 50  0001 C CNN
+F 1 "GND" H 3505 3827 50  0000 C CNN
+F 2 "" H 3500 4000 50  0001 C CNN
+F 3 "" H 3500 4000 50  0001 C CNN
+	1    3500 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 4000 3500 3900
+$Comp
+L power:GND #PWR02
+U 1 1 5FF386D2
+P 4500 4500
+F 0 "#PWR02" H 4500 4250 50  0001 C CNN
+F 1 "GND" H 4505 4327 50  0000 C CNN
+F 2 "" H 4500 4500 50  0001 C CNN
+F 3 "" H 4500 4500 50  0001 C CNN
+	1    4500 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5FF389C9
+P 5500 4500
+F 0 "#PWR03" H 5500 4250 50  0001 C CNN
+F 1 "GND" H 5505 4327 50  0000 C CNN
+F 2 "" H 5500 4500 50  0001 C CNN
+F 3 "" H 5500 4500 50  0001 C CNN
+	1    5500 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 4400 4500 4500
+Wire Wire Line
+	5500 4400 5500 4500
+$Comp
+L Connector:Screw_Terminal_01x02 J2
+U 1 1 5FF39124
+P 7200 3800
+F 0 "J2" H 7150 3900 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 6750 4100 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 7200 3800 50  0001 C CNN
+F 3 "~" H 7200 3800 50  0001 C CNN
+	1    7200 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 3800 6000 3800
+$Comp
+L power:GND #PWR05
+U 1 1 5FF3A02C
+P 7000 4000
+F 0 "#PWR05" H 7000 3750 50  0001 C CNN
+F 1 "GND" H 7005 3827 50  0000 C CNN
+F 2 "" H 7000 4000 50  0001 C CNN
+F 3 "" H 7000 4000 50  0001 C CNN
+	1    7000 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 4000 7000 3900
+$Comp
+L Device:R R1
+U 1 1 5FF3A6FA
+P 6250 3500
+F 0 "R1" V 6043 3500 50  0000 C CNN
+F 1 "10k" V 6134 3500 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6180 3500 50  0001 C CNN
+F 3 "~" H 6250 3500 50  0001 C CNN
+	1    6250 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5FF3B443
+P 6500 4250
+F 0 "C2" H 6615 4296 50  0000 L CNN
+F 1 "470uF" H 6615 4205 50  0000 L CNN
+F 2 "Capacitor_THT:C_Axial_L5.1mm_D3.1mm_P10.00mm_Horizontal" H 6538 4100 50  0001 C CNN
+F 3 "~" H 6500 4250 50  0001 C CNN
+	1    6500 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5FF3C0BC
+P 6500 4500
+F 0 "#PWR04" H 6500 4250 50  0001 C CNN
+F 1 "GND" H 6505 4327 50  0000 C CNN
+F 2 "" H 6500 4500 50  0001 C CNN
+F 3 "" H 6500 4500 50  0001 C CNN
+	1    6500 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 4500 6500 4400
+Wire Wire Line
+	6500 4100 6500 4000
+Wire Wire Line
+	6500 3500 6400 3500
+Wire Wire Line
+	6100 3500 5500 3500
+Connection ~ 5500 3500
+Wire Wire Line
+	6000 4000 6250 4000
+Connection ~ 6500 4000
+Wire Wire Line
+	6500 4000 6500 3500
+Wire Wire Line
+	6000 4200 6250 4200
+Wire Wire Line
+	6250 4200 6250 4000
+Connection ~ 6250 4000
+Wire Wire Line
+	6250 4000 6500 4000
+Text Notes 7300 3800 0    50   ~ 0
+OUTPUT
+Text Notes 7300 3900 0    50   ~ 0
+GND
+Text Notes 3050 3700 0    50   ~ 0
+Vcc
+Text Notes 3050 3800 0    50   ~ 0
+TRIG
+Text Notes 3050 3900 0    50   ~ 0
+GND
+$EndSCHEMATC
